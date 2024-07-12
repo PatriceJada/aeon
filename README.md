@@ -13,7 +13,7 @@ We strive to provide a broad library of time series algorithms including the
 latest advances, offer efficient implementations using numba, and interfaces with other
 time series packages to provide a single framework for algorithm comparison.
 
-The latest `aeon` release is `v0.9.0`. You can view the full changelog
+The latest `aeon` release is `v0.10.0`. You can view the full changelog
 [here](https://www.aeon-toolkit.org/en/stable/changelog.html).
 
 Our webpage and documentation is available at https://aeon-toolkit.org.
@@ -32,7 +32,7 @@ does not apply:
 
 ## ⚙️ Installation
 
-`aeon` requires a Python version of 3.8 or greater. Our full installation guide is
+`aeon` requires a Python version of 3.9 or greater. Our full installation guide is
 available in our [documentation](https://www.aeon-toolkit.org/en/stable/installation.html).
 
 The easiest way to install `aeon` is via pip:
@@ -57,31 +57,6 @@ The best place to get started for all `aeon` packages is our [getting started gu
 
 Below we provide a quick example of how to use `aeon` for forecasting,
 classification and clustering.
-
-### Forecasting
-
-```python
-import pandas as pd
-from aeon.forecasting.trend import TrendForecaster
-
-y = pd.Series([20.0, 40.0, 60.0, 80.0, 100.0])
->>> 0     20.0
->>> 1     40.0
->>> 2     60.0
->>> 3     80.0
->>> 4    100.0
->>> dtype: float64
-
-forecaster = TrendForecaster()
-forecaster.fit(y)  # fit the forecaster
->>> TrendForecaster()
-
-pred = forecaster.predict(fh=[1, 2, 3])  # forecast the next 3 values
->>> 5    120.0
->>> 6    140.0
->>> 7    160.0
->>> dtype: float64
-```
 
 ### Classification
 
